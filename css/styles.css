@@ -2,13 +2,36 @@
   --clr-1: rgb(30, 30, 30);
   --clr-2: rgb(45, 45, 45);
   --font-clr: rgb(230, 230, 230);
-  --link-clr: rgb(100, 100, 190);
-  --visited-clr: rgb(190, 100, 190);
+  --link-clr: rgb(100, 150, 230);
+  --visited-clr: rgb(190, 100, 230);
+  --bg-img-clr: rgba(30, 30, 30, .5);
+}
+
+@font-face {
+  font-family: "Norse Bold";
+  src: url("../assets/Norse-Bold.otf");
 }
 
 body {
   background-color: var(--clr-1);
   color: var(--font-clr);
+}
+
+header {
+  font-family: 'Norse Bold';
+  font-size: 3rem;
+  background: var(--bg-img-clr);
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  width: 100px;
+  height: 150px;
+}
+
+footer {
+  background: var(--bg-img-clr); 
 }
 
 h2 {
@@ -23,6 +46,10 @@ a:visited {
   color: var(--visited-clr);
 }
 
+.content {
+  display: flex;
+}
+
 .image-container {
-  background-image: url(../assets/sunflowers.avif);
+  background-image: url("../assets/sunflowers.avif");
 }

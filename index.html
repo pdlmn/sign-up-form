@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,6 @@
     <div class="content">
 
       <div class="image-container">
-
         <header>
           <img src="assets/odin-lined.png" alt="">
           <h1>Odin</h1>
@@ -22,68 +21,71 @@
         <footer>
           Photo by <a href="#">someone</a> on <a href="https://unsplash.com/">Unsplash</a>
         </footer>
-
       </div>
 
       <div class="sign-up-container">
+
         <div class="dummy-text">
           <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <span class="italic">now</span> to ger started.</p>
           <p>You <span class="italic">know</span> you want to.</p>
         </div>
 
-        <form action="dummywebsite.com">
-
-          <section>
+        <form action="#">
+          <section class="input-area">
             <h2>Let's do this!</h2>
-            
+
             <div class="pair">
               <p>
                 <label for="first">First name</label>
-                <input type="text" id="first" name="first">
+                <input type="text" id="first" name="first" required>
+                <span></span>
               </p>
-            
+
               <p>
                 <label for="last">Last name</label>
                 <input type="text" id="last" name="last">
+                <span></span>
               </p>
             </div>
-            
+
             <div class="pair">
               <p>
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" required>
+                <span></span>
               </p>
-            
+
               <p>
                 <label for="phone">Phone number</label>
                 <input type="tel" id="phone" name="phone">
+                <span></span>
               </p>
             </div>
-            
+
             <div class="pair">
               <p>
                 <label for="password">Password</label>
-                <input type="password" id="password" name="passw2">
+                <input type="password" id="password" name="passw1" required>
+                <span></span>
               </p>
-            
+
               <p>
                 <label for="confirm">Confirm password</label>
-                <input type="text" id="confirm" name="passw2">
+                <input type="text" id="confirm" name="passw2" required>
+                <span></span>
               </p>
             </div>
           </section>
 
-          <section>
+          <section class="submit-area">
             <button type="submit">
               Create Account
             </button>
 
             <p>Already have an account? <a href="#">Log in</a></p>
           </section>
-
-
-
         </form>
+
       </div>
 
     </div>

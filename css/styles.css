@@ -1,10 +1,22 @@
 :root {
-  --clr-1: rgb(30, 30, 30);
-  --clr-2: rgb(45, 45, 45);
+  --sections-padding: .5rem 2.5rem;
+  --shadow: 8px 8px 8px rgba(20, 20, 20, .5);
+}
+
+:root.dark {
+  --bg-clr-1: rgb(30, 30, 30);
+  --bg-clr-2: rgb(45, 45, 45);
   --font-clr: rgb(230, 230, 230);
   --link-clr: rgb(100, 150, 230);
   --visited-clr: rgb(190, 100, 230);
-  --bg-img-clr: rgba(30, 30, 30, .5);
+  --bg-img-clr: rgba(30, 30, 30, .7);
+  --input-border-clr: rgb(100, 100, 100);
+  --input-bg-clr: rgb(20, 20, 20);
+  --valid-clr: rgb(50, 150, 50);
+  --err-clr: rgb(200, 50, 50);
+  --optional-clr: rgb(50, 50, 200);
+  --btn-clr: rgb(89, 109, 72);
+  --btn-hover-clr: rgb(109, 129, 92);
 }
 
 @font-face {
@@ -13,29 +25,48 @@
 }
 
 body {
-  background-color: var(--clr-1);
+  background-color: var(--bg-clr-1);
   color: var(--font-clr);
+  font-family: sans-serif;
+}
+
+.content {
+  display: flex;
+}
+
+.image-container {
+  background-image: url("../assets/sunflowers.avif");
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40vw;
+  flex-shrink: 0;
 }
 
 header {
+  margin-top: 35vh;
   font-family: 'Norse Bold';
   font-size: 3rem;
   background: var(--bg-img-clr);
   display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+header h1 {
+  margin: 1.5rem;
 }
 
 header img {
   width: 100px;
-  height: 150px;
+  height: 130px;
 }
 
 footer {
   background: var(--bg-img-clr); 
-}
-
-h2 {
-  background: var(--clr-2);
+  text-align: center;
+  padding: 16px;
 }
 
 a {
@@ -46,10 +77,115 @@ a:visited {
   color: var(--visited-clr);
 }
 
-.content {
+.dummy-text {
+  height: 50vh;
+  padding: var(--sections-padding);
+  padding-top: 10vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.image-container {
-  background-image: url("../assets/sunflowers.avif");
+.dummy-text p {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.input-area {
+  background: var(--bg-clr-2);
+  padding: var(--sections-padding);
+  box-shadow: var(--shadow);
+}
+
+.submit-area {
+  margin: var(--sections-padding);
+}
+
+.pair {
+  display: flex;
+  gap: 5rem;
+}
+
+.pair p {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid var(--input-border-clr);
+  background: var(--input-bg-clr);
+  color: var(--font-clr);
+  padding: 8px 12px;
+}
+
+input:focus {
+  outline: 2px solid rgb(100, 100, 230);
+  box-shadow: var(--shadow);
+}
+
+input + span::after {
+  position: absolute;
+  font-size: 0.8rem;
+  right: 5px;
+  top: -4px;
+  letter-spacing: .15ch;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+input:required + span::after {
+  content: 'required';
+  background: var(--err-clr);
+}
+
+input:valid + span::after {
+  content: 'ok';
+  background: var(--valid-clr);
+}
+
+input:optional + span::after {
+  content: 'optional';
+  background: var(--optional-clr);
+}
+
+label {
+  letter-spacing: 0.25ch;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.submit-area {
+  background: var(--bg-clr-1);
+  margin-top: 6vh;
+  margin-bottom: 32vh;
+}
+
+button {
+  background: var(--btn-clr);
+  color: var(--font-clr);
+  border-radius: 6px;
+  border: 0;
+  padding: .75rem 2.5rem;
+}
+
+button:hover {
+  background: var(--btn-hover-clr);
+}
+
+.submit-area a {
+  color: var(--btn-clr);
+  text-decoration: none;
+}
+
+.submit-area a:hover {
+  color: var(--btn-hover-clr);
+  text-decoration: none;
 }

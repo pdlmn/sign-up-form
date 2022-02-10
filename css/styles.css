@@ -1,22 +1,39 @@
 :root {
   --sections-padding: .5rem 2.5rem;
   --shadow: 8px 8px 8px rgba(20, 20, 20, .5);
+  --link-clr: rgb(100, 150, 230);
+  --visited-clr: rgb(190, 100, 230);
+  --bg-img-clr: rgba(30, 30, 30, .7);
+  --input-border-clr: rgb(100, 100, 100);
+  --btn-clr: rgb(89, 109, 72);
+  --btn-font-clr: rgb(230, 230, 230);
+  --btn-hover-clr: rgb(109, 129, 92);
 }
 
 :root.dark {
   --bg-clr-1: rgb(30, 30, 30);
   --bg-clr-2: rgb(45, 45, 45);
-  --font-clr: rgb(230, 230, 230);
-  --link-clr: rgb(100, 150, 230);
-  --visited-clr: rgb(190, 100, 230);
-  --bg-img-clr: rgba(30, 30, 30, .7);
-  --input-border-clr: rgb(100, 100, 100);
+  --font-clr-1: rgb(230, 230, 230);
+  --font-clr-2: rgb(210, 210, 210);
   --input-bg-clr: rgb(20, 20, 20);
   --valid-clr: rgb(50, 150, 50);
   --err-clr: rgb(200, 50, 50);
   --optional-clr: rgb(50, 50, 200);
-  --btn-clr: rgb(89, 109, 72);
-  --btn-hover-clr: rgb(109, 129, 92);
+}
+
+:root.light {
+  --bg-clr-1: rgb(230, 230, 230);
+  --bg-clr-2: rgb(245, 245, 245);
+  --font-clr-1: rgb(30, 30, 30);
+  --font-clr-2: rgb(60, 60, 60);
+  --input-bg-clr: rgb(220, 220, 220);
+  --valid-clr: rgb(150, 250, 150);
+  --err-clr: rgb(250, 150, 150);
+  --optional-clr: rgb(150, 150, 250);
+}
+
+:root > * {
+  transition: all .17s;
 }
 
 @font-face {
@@ -26,7 +43,7 @@
 
 body {
   background-color: var(--bg-clr-1);
-  color: var(--font-clr);
+  color: var(--font-clr-1);
   font-family: sans-serif;
 }
 
@@ -49,6 +66,7 @@ header {
   font-family: 'Norse Bold';
   font-size: 3rem;
   background: var(--bg-img-clr);
+  color: rgb(230, 230, 230);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,6 +83,7 @@ header img {
 
 footer {
   background: var(--bg-img-clr); 
+  color: rgb(230, 230, 230);
   text-align: center;
   padding: 16px;
 }
@@ -77,8 +96,18 @@ a:visited {
   color: var(--visited-clr);
 }
 
+#theme-toggler {
+  margin: var(--sections-padding);
+  background-color: var(--font-clr-1);
+  color: var(--bg-clr-1);
+}
+
+#theme-toggler:hover {
+  background-color: var(--font-clr-2);
+}
+
 .dummy-text {
-  height: 50vh;
+  height: 35vh;
   padding: var(--sections-padding);
   padding-top: 10vh;
   display: flex;
@@ -95,6 +124,7 @@ a:visited {
 
 .italic {
   font-style: italic;
+  color: var(--font-clr-2);
 }
 
 .input-area {
@@ -122,7 +152,7 @@ input {
   border-radius: 5px;
   border: 1px solid var(--input-border-clr);
   background: var(--input-bg-clr);
-  color: var(--font-clr);
+  color: var(--font-clr-1);
   padding: 8px 12px;
 }
 
@@ -171,7 +201,7 @@ label {
 
 button {
   background: var(--btn-clr);
-  color: var(--font-clr);
+  color: var(--btn-font-clr);
   border-radius: 6px;
   border: 0;
   padding: .75rem 2.5rem;

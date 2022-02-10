@@ -1,14 +1,28 @@
 :root {
-  --bg-color: rgb(30, 30, 30);
-  --accent-bg-color: rgb(45, 45, 45);
-  --font-color: rgb(230, 230, 230);
+  --clr-1: rgb(30, 30, 30);
+  --clr-2: rgb(45, 45, 45);
+  --font-clr: rgb(230, 230, 230);
+  --link-clr: rgb(100, 100, 190);
+  --visited-clr: rgb(190, 100, 190);
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--font-color);
+  background-color: var(--clr-1);
+  color: var(--font-clr);
 }
 
-h1 {
-  background: var(--accent-bg-color);
+h2 {
+  background: var(--clr-2);
+}
+
+a {
+  color: var(--link-clr);
+}
+
+a:visited {
+  color: var(--visited-clr);
+}
+
+.image-container {
+  background-image: url(../assets/sunflowers.avif);
 }

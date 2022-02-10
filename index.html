@@ -8,26 +8,84 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Sign-up form</title>
   </head>
-<body>
+  <body>
 
-  <div class="content">
+    <div class="content">
 
-    <div class="image-container">
-    </div>
+      <div class="image-container">
 
-    <div class="sign-up-container">
+        <header>
+          <h1>Odin</h1>
+        </header>
 
-      <div class="dummy-text">
+        <div>
+          Photo by <a href="#">someone</a> on <a href="https://unsplash.com/">Unsplash</a>
+        </div>
 
       </div>
 
+      <div class="sign-up-container">
+        <div class="dummy-text">
+          <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <span class="italic">now</span> to ger started.</p>
+          <p>You <span class="italic">know</span> you want to.</p>
+        </div>
+
         <form action="dummywebsite.com">
-          <h1>Let's do this!</h1>
+
+          <section>
+            <h2>Let's do this!</h2>
+            
+            <div class="pair">
+              <p>
+                <label for="first">First name</label>
+                <input type="text" id="first" name="first">
+              </p>
+            
+              <p>
+                <label for="last">Last name</label>
+                <input type="text" id="last" name="last">
+              </p>
+            </div>
+            
+            <div class="pair">
+              <p>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+              </p>
+            
+              <p>
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone">
+              </p>
+            </div>
+            
+            <div class="pair">
+              <p>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="passw2">
+              </p>
+            
+              <p>
+                <label for="confirm">Confirm password</label>
+                <input type="text" id="confirm" name="passw2">
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <button type="submit">
+              Create Account
+            </button>
+
+            <p>Already have an account? <a href="#">Log in</a></p>
+          </section>
+
+
+
         </form>
+      </div>
 
     </div>
 
-  </div>
-
-</body>
+  </body>
 </html>

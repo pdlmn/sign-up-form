@@ -146,7 +146,8 @@ input:required + span::after {
   background: var(--err-clr);
 }
 
-input:valid + span::after {
+input:valid + span::after,
+input:optional + span::after {
   content: 'ok';
   background: var(--valid-clr);
 }

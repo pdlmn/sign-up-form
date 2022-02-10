@@ -19,7 +19,7 @@
         </header>
 
         <footer>
-          Photo by <a href="#">someone</a> on <a href="https://unsplash.com/">Unsplash</a>
+          Photo by <a href="https://unsplash.com/@kentbanespo">Kent Banes</a> on <a href="https://unsplash.com/">Unsplash</a>
         </footer>
       </div>
 
@@ -37,13 +37,13 @@
             <div class="pair">
               <p>
                 <label for="first">First name</label>
-                <input type="text" id="first" name="first" required>
+                <input type="text" id="first" name="first" minlength="5" maxlength="30" required>
                 <span></span>
               </p>
 
               <p>
                 <label for="last">Last name</label>
-                <input type="text" id="last" name="last">
+                <input type="text" id="last" name="last" minlength="5" maxlength="30">
                 <span></span>
               </p>
             </div>
@@ -65,13 +65,13 @@
             <div class="pair">
               <p>
                 <label for="password">Password</label>
-                <input type="password" id="password" name="passw1" required>
+                <input type="password" id="password" name="passw1" minlength="5" maxlength="30" required>
                 <span></span>
               </p>
 
               <p>
                 <label for="confirm">Confirm password</label>
-                <input type="text" id="confirm" name="passw2" required>
+                <input type="password" id="confirm" name="passw2" required>
                 <span></span>
               </p>
             </div>
